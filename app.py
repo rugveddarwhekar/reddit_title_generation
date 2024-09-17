@@ -47,8 +47,12 @@ chain = LLMChain(llm=llm, prompt=prompt_template)
 st.title("Post Title & Description Generator")
 
 # Take new build ID and version name as input
-new_build_id = st.text_input("New Build ID")
-new_version_name = st.text_input("New Version Name")
+new_build_id = st.text_input(
+    "New Build ID",
+    placeholder="AP41.240823.009")
+new_version_name = st.text_input(
+    "New Version Name",
+    placeholder="Android 15 QPR1 Beta 1")
 
 if st.button("Generate"):
     if new_build_id and new_version_name:
